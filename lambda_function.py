@@ -6,7 +6,7 @@ from io import StringIO
 
 s3 = boto3.client('s3')
 sns = boto3.client('sns')
-sns_arn = 'arn:aws:sns:us-east-1:025066280149:speed-dash-sns:ccf97a4c-a0a6-4013-9c4b-4606ed5544db'
+sns_arn = 'arn:aws:sns:us-east-1:025066280149:speed-dash-sns'
 
 s3_target_bucket = 'speed-dash-target-zone'
 
