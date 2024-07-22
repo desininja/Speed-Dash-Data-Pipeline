@@ -13,7 +13,6 @@ s3_target_bucket = 'speed-dash-target-zone'
 
 def lambda_handler(event, context):
     
-    print(event)
     landing_bucket= event['Records'][0]['s3']['bucket']['name']
     object_key = event['Records'][0]['s3']['object']['key']
 
