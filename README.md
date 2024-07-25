@@ -54,9 +54,9 @@ Steps:
     - Create an SNS topic for sending processing notifications.
     - Subscribe an email to the topic for receiving notifications.
 4. Create IAM Role for Lambda:
-    [!IMPORTANT]
+    > [!IMPORTANT]
     - Create an IAM role with permissions to read from speed-dash-landing-zone, write to speed-dash-target-zone, and publish messages to the SNS topic.
-5. Create and Configure AWS Lambda Function:
+6. Create and Configure AWS Lambda Function:
     - Create a Lambda function using Python runtime.
     - Add the pandas library to the function's deployment package or use a Lambda Layer for pandas.
     - Use the S3 trigger to invoke the function upon file uploads to speed-dash-landing-zone.
@@ -65,12 +65,12 @@ Steps:
         - Filter records where status is "delivered".
         - Write the filtered DataFrame to a new JSON file in speed-dash-target-zone using the specified format.
         - Publish a success or failure message to the SNS topic.
-6. AWS CodeBuild for CI/CD:
+7. AWS CodeBuild for CI/CD:
     - Host your Lambda function code on GitHub.
     - Set up an AWS CodeBuild project linked to your GitHub repository.
     - Configure the [buildspec.yml](buildspec.yml) to automate deployment of your Lambda function code updates.
 
-7. Testing and Verification:
+8. Testing and Verification:
     - Upload the sample JSON file to speedd-dash-landing-zone and verify that the Lambda function triggers correctly.
     - Check speed-dash-target-zone for the processed file and confirm its contents.
     - Ensure an email notification is received upon processing completion.
