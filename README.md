@@ -77,4 +77,4 @@ Steps:
 
 ## Architecture Diagram
 
-![Architecture](Project Screenshots/Speed Dash Data Pipeline Architecture.png)
+![Architecture](https://github.com/desininja/Speed-Dash-Data-Pipeline/blob/main/Project%20Screenshots/Speed%20Dash%20Data%20Pipeline%20Architecture.png)
